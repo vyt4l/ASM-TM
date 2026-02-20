@@ -26,7 +26,7 @@ segment .text
 
 main:
     push rbp
-        mov rbp,rsp
+    mov rbp,rsp
     push rbx
     push r12
     lea rdi,[prompt1]
