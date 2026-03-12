@@ -28,7 +28,11 @@ main:
   lea rdi,[entier]
   call read_int
   
-  mov rax , [entier]
+  mov rax , [entier] 
+
+  cmp rax, 0
+  je false
+
   mov rbx, rax
   sub rbx , 1
 
@@ -36,14 +40,15 @@ main:
   cmp rax, 0
   je true
 
-  lea rdi,[formatSortie2]
+false :
+  lea rdi , [formatSortie2]
   call print_string
-
+  
   lea rdi,[newLine]
   call print_string
 
   jmp fin_affichage
-  
+
 
 true :
   lea rdi , [formatSortie1]
