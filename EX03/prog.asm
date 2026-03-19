@@ -26,8 +26,8 @@ main:
 
     lea rdi,[promptGenre]
     call print_string
-        lea rdi,[reponse]
-        call read_int
+    lea rdi,[reponse]
+    call read_int
 
     mov rax, [reponse]
     cmp rax, 0
@@ -45,6 +45,7 @@ main:
 afficher_monsieur:
     lea rdi,[msgMonsieur]
     call print_string
+    jmp fin_affichage
 
 afficher_madame:
     lea rdi,[msgMadame]
